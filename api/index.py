@@ -15,10 +15,10 @@ from deep_translator import GoogleTranslator
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 
 # Finnhub API key
-FINNHUB_KEY = "d7v00lhr01qp7l70gsk0d7v00lhr01qp7l70gskg"
+FINNHUB_KEY = os.getenv("FINNHUB_KEY", "")
 
 # Tiingo API Key (EXCLUSIVO PARA LA CINTA DE PRECIOS EN LOTE)
-TIINGO_KEY = "7885e00a47af2b69f5a5dd5d2fe4d1745271192b"
+TIINGO_KEY = os.getenv("TIINGO_KEY", "")
 
 def fetch_finnhub_news(symbol: str) -> list[dict]:
   """
